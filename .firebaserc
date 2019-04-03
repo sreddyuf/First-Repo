@@ -1,0 +1,40 @@
+{
+  "projects": {
+    "default": "profdev-fcfeb",
+    "master": "profdev-fcfeb",
+    "prod": "profdev-fcfeb"
+  },
+  "ci": {
+    "copyVersion": true,
+    "createConfig": {
+      "master": {
+        "env": "staging",
+        "firebase": {
+          "apiKey": "${STAGE_FIREBASE_API_KEY}",
+          "authDomain": "profdev-fcfeb.firebaseapp.com",
+          "databaseURL": "https://profdev-fcfeb.firebaseio.com",
+          "projectId": "profdev-fcfeb",
+          "storageBucket": "profdev-fcfeb.appspot.com",
+          "messagingSenderId": "42319878405"
+        },
+        "sentryDsn": "${SENTRY_DSN}",
+        "analyticsTrackingId": "${GA_TRACKING_ID}",
+        "publicVapidKey": "${STAGE_PUBLIC_VAPID_KEY}"
+      },
+      "prod": {
+        "env": "production",
+        "firebase": {
+          "apiKey": "${PROD_FIREBASE_API_KEY}",
+          "authDomain": "profdev-fcfeb.firebaseapp.com",
+          "databaseURL": "https://profdev-fcfeb.firebaseio.com",
+          "projectId": "profdev-fcfeb",
+          "storageBucket": "profdev-fcfeb.appspot.com",
+          "messagingSenderId": "42319878405"
+        },
+        "sentryDsn": "${SENTRY_DSN}",
+        "analyticsTrackingId": "${GA_TRACKING_ID}",
+        "publicVapidKey": "${PROD_PUBLIC_VAPID_KEY}"
+      }
+    }
+  }
+}
